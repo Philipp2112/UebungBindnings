@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.uebung230607_1.view.ClientController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="welcomeText"/>
+    <Button text="set" onAction="#onSetButtonClick"/>
+    <Button text="load" onAction="#onLoadButtonClick"/>
+    <Button text="set and load" onAction="#onSetAndLoadClick"/>
+    <HBox>
+        <Label text="inputXKoordinate"/>
+        <TextField fx:id="inputXKoordinate"/>
+        <Label fx:id="outputXKoordinate"/>
+    </HBox>
+    <HBox>
+        <Label text="inputYKoordinate"/>
+        <TextField fx:id="inputYKoordinate"/>
+        <Label fx:id="outputYKoordinate"/>
+    </HBox>
+    <HBox>
+        <Label text="inputZKoordinate"/>
+        <TextField fx:id="inputZKoordinate"/>
+        <Label fx:id="outputZKoordinate"/>
+    </HBox>
+    <HBox>
+        <Label text="inputSpeed"/>
+        <TextField fx:id="inputSpeed"/>
+        <Label fx:id="outputSpeed"/>
+    </HBox>
+</VBox>
