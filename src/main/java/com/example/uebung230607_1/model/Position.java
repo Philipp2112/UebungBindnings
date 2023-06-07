@@ -19,7 +19,7 @@ public class Position
         return xKoordinate;
     }
 
-    public void setxKoordinate(double xKoordinate)
+    public synchronized void setxKoordinate(double xKoordinate)
     {
         this.xKoordinate = xKoordinate;
     }
@@ -29,7 +29,7 @@ public class Position
         return yKoordinate;
     }
 
-    public void setyKoordinate(double yKoordinate)
+    public synchronized void setyKoordinate(double yKoordinate)
     {
         this.yKoordinate = yKoordinate;
     }
@@ -39,7 +39,7 @@ public class Position
         return zKoordinate;
     }
 
-    public void setzKoordinate(double zKoordinate)
+    public synchronized void setzKoordinate(double zKoordinate)
     {
         this.zKoordinate = zKoordinate;
     }

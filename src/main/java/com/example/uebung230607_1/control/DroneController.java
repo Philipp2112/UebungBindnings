@@ -1,12 +1,8 @@
 package com.example.uebung230607_1.control;
 
 import com.example.uebung230607_1.model.Drone;
-import com.example.uebung230607_1.model.Geschwindigkeit;
-import com.example.uebung230607_1.model.Position;
 import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 
@@ -48,6 +44,7 @@ public class DroneController
            public void changed(ObservableValue<? extends Number> observableValue, Number alteGeschwindigkeit, Number neueGeschwindigkeit)
            {
                drone.getGeschwindigkeit().setGeschwindigkeit((Double) neueGeschwindigkeit);
+               System.out.println("Geschwindigkeit hat sich geändert!!!");
            }
        });
 
@@ -57,6 +54,7 @@ public class DroneController
            public void changed(ObservableValue<? extends Number> observableValue, Number alteXKoordinate, Number neueXKoordinate)
            {
                drone.getPosition().setxKoordinate((Double) neueXKoordinate);
+               System.out.println("sfafsas");
            }
        });
 
@@ -83,7 +81,7 @@ public class DroneController
 
 
 
-    public DoubleProperty geschwindigkeitsProperty()
+    public DoubleProperty getGeschwindigkeitsProperty()
     {
         return geschwindigkeitsProperty;
     }

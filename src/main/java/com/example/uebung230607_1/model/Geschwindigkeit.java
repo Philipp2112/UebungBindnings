@@ -14,7 +14,7 @@ public class Geschwindigkeit
         return geschwindigkeit;
     }
 
-    public void setGeschwindigkeit(double geschwindigkeit)
+    public synchronized void setGeschwindigkeit(double geschwindigkeit)
     {
         this.geschwindigkeit = geschwindigkeit;
     }

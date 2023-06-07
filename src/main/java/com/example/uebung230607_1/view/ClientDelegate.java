@@ -1,16 +1,14 @@
 package com.example.uebung230607_1.view;
 
 import com.example.uebung230607_1.control.DroneController;
-import javafx.beans.Observable;
 import javafx.beans.binding.Bindings;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.util.converter.DoubleStringConverter;
 import javafx.util.converter.NumberStringConverter;
 
-public class ClientController
+public class ClientDelegate
 {
     public TextField inputXKoordinate;
     public Label outputXKoordinate;
@@ -20,11 +18,10 @@ public class ClientController
     public Label outputZKoordinate;
     public TextField inputSpeed;
     public Label outputSpeed;
- //DroneController.getClassInstance().geschwindigkeitsProperty()
     @FXML
     private void initialize()
     {
-        DroneController.getClassInstance().geschwindigkeitsProperty().bind(Bindings.createDoubleBinding(()->{
+       /* DroneController.getClassInstance().getGeschwindigkeitsProperty().bind(Bindings.createDoubleBinding(()->{
             if (inputSpeed.getText().equals(""))
             {
                 return 0.0;
@@ -38,13 +35,13 @@ public class ClientController
                     return 0.0;
                 }
             }
-        },inputSpeed.textProperty()));
+        },inputSpeed.textProperty()));*/
 
 
-       /*Bindings.bindBidirectional(outputSpeed.textProperty() , DroneController.getClassInstance().geschwindigkeitsProperty() , new NumberStringConverter());
+       Bindings.bindBidirectional(outputSpeed.textProperty() , DroneController.getClassInstance().getGeschwindigkeitsProperty() , new NumberStringConverter());
        Bindings.bindBidirectional(outputXKoordinate.textProperty(), DroneController.getClassInstance().xKoordinateProperty(), new NumberStringConverter());
        Bindings.bindBidirectional(outputYKoordinate.textProperty(), DroneController.getClassInstance().yKoordinateProperty(), new NumberStringConverter());
-       Bindings.bindBidirectional(outputZKoordinate.textProperty(), DroneController.getClassInstance().zKoordinateProperty(), new NumberStringConverter());*/
+       Bindings.bindBidirectional(outputZKoordinate.textProperty(), DroneController.getClassInstance().zKoordinateProperty(), new NumberStringConverter());
     }
 
 
@@ -54,9 +51,9 @@ public class ClientController
     @FXML
     protected void onSetButtonClick()
     {
-        DroneController.getClassInstance().xKoordinateProperty().set(new DoubleStringConverter().fromString(inputXKoordinate.getText()));
-        DroneController.getClassInstance().yKoordinateProperty().set(new DoubleStringConverter().fromString(inputYKoordinate.getText()));
-        DroneController.getClassInstance().zKoordinateProperty().set(new DoubleStringConverter().fromString(inputZKoordinate.getText()));
+        //DroneController.getClassInstance().xKoordinateProperty().set(new DoubleStringConverter().fromString(inputXKoordinate.getText()));
+        //DroneController.getClassInstance().yKoordinateProperty().set(new DoubleStringConverter().fromString(inputYKoordinate.getText()));
+        //DroneController.getClassInstance().zKoordinateProperty().set(new DoubleStringConverter().fromString(inputZKoordinate.getText()));
         //DroneController.getClassInstance().geschwindigkeitsProperty().set(new DoubleStringConverter().fromString(inputSpeed.getText()));
     }
 
